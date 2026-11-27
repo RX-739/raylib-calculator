@@ -11,8 +11,8 @@ int main(){
 
     while (!WindowShouldClose()){
 
-
         BeginDrawing();
+
 
         ClearBackground(BLACK);
 
@@ -23,8 +23,6 @@ int main(){
 
         
         EndDrawing();
-    
-
     
     }
     CloseWindow();
