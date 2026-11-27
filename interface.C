@@ -68,6 +68,9 @@ void HandleMouseInput(void) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button2)) {
             printf("2\n");
     }
+    if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button3)) {
+            printf("3\n");
+    }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonPlus)) {
             printf("+\n");
     }
