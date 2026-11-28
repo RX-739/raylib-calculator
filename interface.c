@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <raylib.h>
 #include "interface.h"
+#include "calculator.h"
 
 static Rectangle buttonAC = {67.5f, 170, 155, 75};
 static Rectangle buttonPlusMinus = {237.5f, 170, 155, 75};
@@ -37,45 +38,99 @@ void HandleMouseInput(void) {
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonDivide)) {
             printf("÷\n");
+            CalculatorSetOperator('/');
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button7)) {
             printf("7\n");
+            CalculatorInputDigit(7);
+    }
+    if (IsKeyPressed(KEY_SEVEN)){
+        printf("Key7\n");
+        CalculatorInputDigit(7);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button8)) {
             printf("8\n");
+            CalculatorInputDigit(8);
+    }
+    if (IsKeyPressed(KEY_EIGHT)){
+        printf("Key8\n");
+        CalculatorInputDigit(8);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button9)) {
             printf("9\n");
+            CalculatorInputDigit(9);
+    }
+    if (IsKeyPressed(KEY_NINE)){
+        printf("Key9\n");
+        CalculatorInputDigit(9);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonX)) {
             printf("x\n");
+            CalculatorSetOperator('*');
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button4)) {
             printf("4\n");
+            CalculatorInputDigit(4);
+    }
+    if (IsKeyPressed(KEY_FOUR)){
+        printf("Key4\n");
+        CalculatorInputDigit(4);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button5)) {
             printf("5\n");
+            CalculatorInputDigit(5);
+    }
+    if (IsKeyPressed(KEY_FIVE)){
+        printf("Key5\n");
+        CalculatorInputDigit(5);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button6)) {
             printf("6\n");
+            CalculatorInputDigit(6);
+    }
+    if (IsKeyPressed(KEY_SIX)){
+        printf("Key6\n");
+        CalculatorInputDigit(6);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonMinus)) {
             printf("-\n");
+            CalculatorSetOperator('-');
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button1)) {
             printf("1\n");
+            CalculatorInputDigit(1);
+    }
+    if (IsKeyPressed(KEY_ONE)){
+        printf("Key1\n");
+        CalculatorInputDigit(1);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button2)) {
             printf("2\n");
+            CalculatorInputDigit(2);
+    }
+    if (IsKeyPressed(KEY_TWO)){
+        printf("Key2\n");
+        CalculatorInputDigit(2);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button3)) {
             printf("3\n");
+            CalculatorInputDigit(3);
+    }
+    if (IsKeyPressed(KEY_THREE)){
+        printf("Key3\n");
+        CalculatorInputDigit(3);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonPlus)) {
             printf("+\n");
+            CalculatorSetOperator('+');
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, button0)) {
             printf("0\n");
+            CalculatorInputDigit(0);
+    }
+    if (IsKeyPressed(KEY_ZERO)){
+        printf("Key0\n");
+        CalculatorInputDigit(0);
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonDecimal)) {
             printf(".\n");
@@ -85,6 +140,7 @@ void HandleMouseInput(void) {
     }
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(mousePosition, buttonEquals)) {
             printf("=\n");
+            CalculatorSetOperator('=');
     }
 }
 
